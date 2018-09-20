@@ -13,7 +13,12 @@ function createWindow() {
         webPreferences: {
             // say explicitly to disable insecure content, more
             // https://github.com/electron/electron/blob/master/docs/tutorial/security.md#8-do-not-set-allowrunninginsecurecontent-to-true
-            allowRunningInsecureContent: false
+            allowRunningInsecureContent: false,
+            webSecurity: true,
+            experimentalFeatures: false,
+            nodeIntegration: false
+            // TODO! more -> https://github.com/electron/electron/blob/master/docs/tutorial/security.md#2-disable-nodejs-integration-for-remote-content
+            // preload: path.join(__dirname, 'preload.js')
         }
     });
 
@@ -22,7 +27,7 @@ function createWindow() {
         `file://${__dirname}/build/electron/index-electron.html`
     );
     // remove possiblity of eval from main window
-    mainWindow.eval = global.eval = function() {
+    mainWindow.eval = global.eval = () => {
         throw new Error(`Sorry, this app does not support window.eval().`);
     };
 
