@@ -1,11 +1,3 @@
-## Summary
-
-This repository was originally created for [this medium article](https://medium.com/@ad_harmonium/build-to-both-electron-js-and-browser-targets-using-webpack-59266bdb76a) about developing a simple webpack based app for both web and electron. This is not meant to be a starter/boilerplate of any kind, just a proof of concept! 
-
-`webpack-electron` is a great starting point for anyone looking to use webpack and electron together.
-
-This is a redo for Webpack 3/4. It's intent is to recreate the original intentions of the first article as closely as possible with changes to webpack. It does not take care of some key issues, such as conditionally requiring electron renderer runtime modules, or automatically reloading the electron app, etc.
-
 ## Getting Started
 
 `yarn` everything first!
