@@ -1,0 +1,5 @@
+public
+build
+docs
+node_modules
+**/_old/*
